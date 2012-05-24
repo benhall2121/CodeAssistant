@@ -1,0 +1,51 @@
+<html>
+  <head>
+    <title>Image Slider</title>
+    <LINK href="style.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript">
+      //Create the array 'imageArr' and add the path of the images into the array
+
+      
+      //Create the variable 'counter' and set the value to 0
+      
+
+      //Create a function called 'loadImage' that accepts a variable 'imageAtNum'
+      //This function will set the source of the html image tag as the path located in the 'imageArr' with the corresponding index 'imageAtNum'
+      
+
+      //Create a function called 'nextImage'
+      //This function will add one to the 'counter' variable
+      //If the 'counter' variable is equal to the length of the 'imageArr', set 'counter' equal to 0
+      //Call the 'loadImage' function with the counter variable 
+      
+
+      //Create a function called 'prevImage'
+      //This function will subtract one from the 'counter' variable
+      //If the 'counter' variable is equal to 0, set 'counter' equal to the length of the 'imageArr'
+      //Call the 'loadImage' function with the counter variable
+       
+
+    </script>
+  </head>
+
+  <!-- Use the 'unload' method to call the 'loadImage' function with the first value of the imageArr -->
+  <body>
+
+
+    <div class="image_wrapper">
+      <!-- Use the OnClick method to call the prevImage function -->
+      <div class="arrow_left">
+        <img src="images/triangle_orange_left.png">
+      </div>
+      <div>
+	<!-- The image id needs to be set to preview so we can use it to access the element with javascript -->
+        <img src="" id="preview">
+      </div>
+      <!-- Use the OnClick method to call the "nextImage" function -->
+      <div class="arrow_right">
+        <img src="images/triangle_orange_right.png">
+      </div>
+    </div>
+
+  </body>
+</html>
