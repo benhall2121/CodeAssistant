@@ -1,0 +1,46 @@
+body{
+    background-color:gray;
+  }
+
+  .all_posts_wrapper, .blog_title{
+    border:1px solid black;
+    width:70%;
+    margin:20px auto;
+    padding:20px;
+    background-color:white;
+  }
+
+  .blog_title{
+    text-align:center;
+  }
+
+  .post_header{
+    font-family: 'Henny Penny', cursive;
+    font-weight:bold;
+    font-size:20px;
+    color:brown;
+  }
+
+  .post_image{
+    float:left;
+    border:1px solid gray;
+    padding:6px;
+    margin:0 10px 10px 0;
+  }
+
+.awesome_buttons_div{
+  text-align:center;
+}
+
+  .awesome_buttons_div div{
+    display:inline-block;
+    padding:2px 7px;
+    border:1px solid #ccc;
+    background-color:white;
+  }
+
+  .awesome_buttons_div div:hover{
+    cursor:pointer;
+    border:1px solid #aaa;
+  }
+

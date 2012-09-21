@@ -1,0 +1,16 @@
+
+
+.main_div{
+  font-size: 142px;
+  padding:20px;
+  text-align: center;
+  color:green;
+}
+
+.main_div:hover{
+  cursor:pointer;
+  font-size: 42px;
+  color:blue;
+}
+
+

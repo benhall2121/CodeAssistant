@@ -4,37 +4,53 @@
     <LINK href="style.css" rel="stylesheet" type="text/css">
     <script type="text/javascript">
       //Create the array 'imageArr' and add the path of the images into the array
-
+      var imageArr = ['images/BigPicture.jpg','images/darth.jpg', 'images/gangplank-logo.png', 'images/graffiti.jpg'];
       
       //Create the variable 'counter' and set the value to 0
-      
+      var counter = 0;
 
       //Create a function called 'loadImage' that accepts a variable 'imageAtNum'
       //This function will set the source of the html image tag as the path located in the 'imageArr' with the corresponding index 'imageAtNum'
+      function loadImage(imageAtNum){
+        document.getElementById('preview').src = imageArr[imageAtNum];
+      }
       
 
       //Create a function called 'nextImage'
       //This function will add one to the 'counter' variable
       //If the 'counter' variable is equal to the length of the 'imageArr', set 'counter' equal to 0
       //Call the 'loadImage' function with the counter variable 
+      function nextImage(){
+        counter++;
+        if(counter == imageArr.length){
+          counter = 0;
+        }
+        loadImage(counter);
+      }
       
 
       //Create a function called 'prevImage'
       //This function will subtract one from the 'counter' variable
       //If the 'counter' variable is equal to 0, set 'counter' equal to the length of the 'imageArr'
       //Call the 'loadImage' function with the counter variable
-       
+      function prevImage(){
+        counter--;
+        if(counter < 0){
+          counter = imageArr.length-1;
+        }
+        loadImage(counter);
+      } 
 
     </script>
   </head>
 
   <!-- Use the 'unload' method to call the 'loadImage' function with the first value of the imageArr -->
-  <body>
+  <body onLoad="loadImage(0)">
 
 
     <div class="image_wrapper">
       <!-- Use the OnClick method to call the prevImage function -->
-      <div class="arrow_left">
+      <div class="arrow_left" onClick="prevImage()">
         <img src="images/triangle_orange_left.png">
       </div>
       <div>
@@ -42,7 +58,7 @@
         <img src="" id="preview">
       </div>
       <!-- Use the OnClick method to call the "nextImage" function -->
-      <div class="arrow_right">
+      <div class="arrow_right"  onClick="nextImage()">
         <img src="images/triangle_orange_right.png">
       </div>
     </div>
